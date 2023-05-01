@@ -12,3 +12,4 @@ st.set_page_config(
         'About': "# Corso di *Basi di Dati*"
     }
 )
+st.title("📈 La mia App")
