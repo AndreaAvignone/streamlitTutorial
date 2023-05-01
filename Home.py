@@ -5,7 +5,7 @@ import pandas as pd
 st.set_page_config(
     page_title="Business Analytics",
     layout="wide",
-    page_icon="📈",
+    page_icon="🗂",
     initial_sidebar_state="expanded",
     menu_items={
         'Get Help': 'https://dbdmg.polito.it/',
@@ -16,7 +16,7 @@ st.set_page_config(
 col1,col2=st.columns([3,2])
 with col1:
     st.title(":red[Live Coding] Session")
-    st.markdown("## Corso di :blue[**Basi di Dati**]")
+    st.markdown("## Corso di :blue[Basi di Dati]")
     st.markdown("#### 🧑‍💻️ Creazione di una dashboard")
 with col2:
     st.image("images/polito_white.png")
