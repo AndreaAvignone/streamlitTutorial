@@ -43,7 +43,12 @@ if check_connection():
 ```
 
 ### Visualizzazione Prodotti
-Panoramica delle principali informazioni riguardanti i prodotti in vendita. Creare la funzione ```def create_tab_prodotti(tab_prodotti):```
+Panoramica delle principali informazioni riguardanti i prodotti in vendita. Creare la funzione ```create_tab_prodotti(tab_prodotti)```
+e aggiungerla al *main*:
+```
+if check_connection():
+    create_tab_prodotti(tab_prodotti=tab_prodotti)
+```
 
 #### Metriche
 Raccogliere le informazioni riguardante i pagamenti: *Importo totale, Pagamento Massimo, Pagamento Medio*.
@@ -95,3 +100,58 @@ st.warning("Nessun dato trovato.",icon='⚠️')
 ```
 st.line_chart(df_paymentDate,x="paymentDate",y='Total Amount')
 ```
+
+### Staff
+Visualizzare brevemente informazioni sui dipendenti. Creare la funzione ```create_tab_prodotti(tab_prodotti)```
+e aggiungerla al *main*:
+```
+if check_connection():
+    create_tab_prodotti(tab_prodotti=tab_prodotti)
+    create_tab_staff(tab_staff=tab_staff)
+```
+1. Recuperare il nome e cognome di *President* e *VP Sales*. SQL: 
+```
+SELECT lastName,firstName FROM employees WHERE jobTitle='President'
+
+SELECT lastName,firstName FROM employees WHERE jobTitle='VP Sales'
+```
+2. Personalizzare il markdown
+3. Recuperare le informazioni riguardo la distribuzione dei dipendenti nei vari ruoli. SQL: 
+<code>
+SELECT COUNT(*) as 'numeroClienti',country FROM customers GROUP by country order by `numeroClienti` DESC;
+</code>
+
+4. Generare il dataframe e plottare il risultato:
+```
+df_staff=pd.DataFrame(staff)
+tab_staff.bar_chart(df_staff,x='jobTitle',y='numDipendenti',use_container_width=True)
+```
+
+### Clienti
+Visualizzare brevemente le informazioni sui clienti in relazione al paese di origine.
+Creare la funzione ```create_tab_clienti(tab_prodotti)```
+e aggiungerla al *main*:
+```
+if check_connection():
+    create_tab_prodotti(tab_prodotti=tab_prodotti)
+    create_tab_staff(tab_staff=tab_staff)
+    create_tab_clienti(tab_clienti=tab_clienti)
+```
+1. Creare le colonne nel tab clienti ```col1,col2=tab_clienti.columns(2)```
+2. Utilizzare il subheader per specificare il ruolo di ogni colonna
+ ```
+col1.subheader("Distribuzione clienti nel mondo")
+col2.subheader("Clienti con maggior *credit limit* negli USA")
+ ```
+ 3. Recuperare le informazioni sull'origine dei clienti ordinandoli per numero. SQL:
+ <code>
+ 	SELECT COUNT(*) as 'numeroClienti',country FROM customers GROUP by country order by `numeroClienti` DESC;
+ </code>
+ 4. Recuperare le informazioni sui clienti **USA** con *creditLimit > 100000* ordinandoli in ordine decrescente. (N.B. questi valori potrebbero essere ulteriori input dell'utente in futuro)
+5. Impostare un'altezza identica per i due df e visualizzarli
+<code>
+	col1.dataframe(df,use_container_width=True,height=350)
+	col2.dataframe(df,use_container_width=True,height=350)
+</code>
+
+## Aggiungere un prodotto
