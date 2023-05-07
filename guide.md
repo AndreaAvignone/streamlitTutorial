@@ -38,7 +38,7 @@ Definire la struttura della pagina
 1. Definire i tab ```st.tabs(["Prodotti","Staff","Clienti"])```
 2. Richiamare il check con comando per accedere al database attraverso il pulsante sulla sidebar:
 ```
-if check_connection():```
+if check_connection():
 	pass
 ```
 
