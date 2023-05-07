@@ -6,7 +6,7 @@
 * Cartella ```images```
 * Cartella ```pages```
 * Script utils ```utils/utils.py```
-* File Home
+* File ```01_🏠_Home``` (homepage)
 
 ### Avviare il progetto 
 
