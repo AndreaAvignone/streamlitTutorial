@@ -116,8 +116,7 @@ SELECT lastName,firstName FROM employees WHERE jobTitle='President'
 SELECT lastName,firstName FROM employees WHERE jobTitle='VP Sales'
 ```
 2. Personalizzare il markdown
-3. Recuperare le informazioni riguardo la distribuzione dei dipendenti nei vari ruoli. SQL: 
-<code>
+3. Recuperare le informazioni riguardo la distribuzione dei dipendenti nei vari ruoli. SQL: <code>
 SELECT COUNT(*) as 'numeroClienti',country FROM customers GROUP by country order by `numeroClienti` DESC;
 </code>
 
@@ -143,15 +142,14 @@ if check_connection():
 col1.subheader("Distribuzione clienti nel mondo")
 col2.subheader("Clienti con maggior *credit limit* negli USA")
  ```
- 3. Recuperare le informazioni sull'origine dei clienti ordinandoli per numero. SQL:
- <code>
- 	SELECT COUNT(*) as 'numeroClienti',country FROM customers GROUP by country order by `numeroClienti` DESC;
- </code>
- 4. Recuperare le informazioni sui clienti **USA** con *creditLimit > 100000* ordinandoli in ordine decrescente. (N.B. questi valori potrebbero essere ulteriori input dell'utente in futuro)
+ 3. Recuperare le informazioni sull'origine dei clienti ordinandoli per numero. SQL:<code>
+ 	SELECT COUNT(*) as 'numeroClienti',country FROM customers GROUP by country order by `numeroClienti` DESC;</code>
+ 4. Recuperare le informazioni sui clienti **USA** con **creditLimit > 100000** ordinandoli in ordine decrescente. (N.B. questi valori potrebbero essere ulteriori input dell'utente in futuro)
 5. Impostare un'altezza identica per i due df e visualizzarli
 <code>
 	col1.dataframe(df,use_container_width=True,height=350)
 	col2.dataframe(df,use_container_width=True,height=350)
 </code>
+
 
 ## Aggiungere un prodotto
