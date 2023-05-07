@@ -52,7 +52,7 @@ def create_tab_prodotti(tab_prodotti):
 
         #verificare che ci siano dati nel periodo selezionato
         if df_paymentDate.empty:
-            st.warning("⚠️ Nessun dato trovato.")
+            st.warning("Nessun dato trovato.",icon='⚠️')
         else:
             #trasformare in float e date type
             df_paymentDate['Total Amount']=df_paymentDate['Total Amount'].astype(float)
