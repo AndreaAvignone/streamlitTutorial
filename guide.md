@@ -7,7 +7,8 @@
 * Cartella ```pages```
 * Script utils ```utils/utils.py```
 * File Home
-Avviare il progetto 
+
+### Avviare il progetto 
 
 ```pipenv shell```
 
