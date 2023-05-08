@@ -1,2 +1,4 @@
 [browser]
 gatherUsageStats = false
+[theme]
+base="dark"
