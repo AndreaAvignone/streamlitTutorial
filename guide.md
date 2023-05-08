@@ -146,9 +146,47 @@ col2.subheader("Clienti con maggior *credit limit* negli USA")
  4. Recuperare le informazioni sui clienti **USA** con **creditLimit > 100000** ordinandoli in ordine decrescente. (N.B. questi valori potrebbero essere ulteriori input dell'utente in futuro)
 5. Impostare un'altezza identica per i due df e visualizzarli
 ```
-	col1.dataframe(df,use_container_width=True,height=350)
-	col2.dataframe(df,use_container_width=True,height=350)
+col1.dataframe(df,use_container_width=True,height=350)
+col2.dataframe(df,use_container_width=True,height=350)
 ```
 
 
 ## Aggiungere un prodotto
+Creare un form per aggiungere un nuovo prodotto al DB.
+### Creazione del form
+Creare la funzione ```create_form()``` e includere il widget del form a cui aggiungere i vari parametri:
+```
+with st.form("Nuovo Prodotto"):
+	st.header(":blue[Aggiungi prodotto:]")
+```
+Creare le funzioni ```get_info()``` e ```get_list(attributo)``` che recuperano tutti i valori distinti possibili per un dato attributo e li restituisce come lista. Ottenere così la lista di *categorie, scale, venditori* all'interno del form per creare le opzioni tra cui scegliere. 
+#### Widget di input
+Inserire i widget per ricevere come input *code, nome,categoria,scala,venditore,descerizione,quantità,prezzo,MSRP* utilizzando:
+```
+st.text_input("",placeholder="")
+st.selectbox("",)
+st.text_area("",placeholder="")
+st.slider("",,)
+st.number_input("",)
+```
+Creare il dizionario che raccolga i parametri e **includere il submit button**:
+```
+insert_dict= {"productCode":code, "productName":nome,"productLine":categoria,"productScale":scala,"productVendor":venditore,"productDescription":descrizione,"quantityInStock":qta,"buyPrice":prezzo,"MSRP":msrp}
+submitted =st.form_submit_button("Submit",type='primary')
+```
+#### Eseguire l'*insert*
+Definire la funzione ```insert(prod_dict)``` che si occupa di eseguire la query e la funzione ```check_info(prod_dict)``` per controllare che non ci siano campi testuali lasciati vuoti.
+
+#### Verifica che l'inserimento sia andato a buon fine
+
+Fuori dal form verificare che, quando il tasto *submit* viene premuto, sia stato possibile completare l'operazione con successo e printare lo status:
+```
+ if submitted:
+        #verificare che l'inserimento sia andato a buon fine oppure no
+        if insert(insert_dict):
+            st.success("Hai inserito questo prodotto: ",icon='✅ ')
+            st.write(insert_dict)
+        else:
+            st.error("Impossibile aggiungere il prodotto.",icon='⚠️')
+```
+
