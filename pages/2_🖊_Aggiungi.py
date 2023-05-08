@@ -70,6 +70,6 @@ def create_form():
  
 
 if __name__ == "__main__":
-    st.title("🖊 Modifica")
+    st.title("🖊 Aggiungi")
     if check_connection():
         create_form()
