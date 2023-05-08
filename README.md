@@ -1,6 +1,11 @@
 # Streamlit Tutorial
 Branch base per avviare un nuovo progetto generico Streamlit con multipage.
 
+## Cambiare branch con Git
+```
+git checkout live_coding
+```
+
 ## Virtual env
 Si suggerisce di creare un virtual environment (e.g., venv, pipenv).
 
