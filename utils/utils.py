@@ -33,7 +33,7 @@ def check_connection():
         st.session_state["connection"]=False
 
     if st.sidebar.button("Connettiti al Database"):
-        myconnection=connect_db(dialect="mysql+pymysql",username="root",password="orangedb23?!",host="127.0.0.1",dbname="classicmodels")
+        myconnection=connect_db(dialect="mysql+pymysql",username="root",password="orangedb23?!",host="localhost",dbname="classicmodels")
         if myconnection is not False:
             st.session_state["connection"]=myconnection
 
