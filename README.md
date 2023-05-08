@@ -4,7 +4,7 @@ Branch base per avviare un nuovo progetto generico Streamlit con multipage.
 ## Virtual env
 Si suggerisce di creare un virtual environment (e.g., venv, pipenv).
 
-```pip install pipenv```
+```pip install --user pipenv```
 
 ## Run
 
