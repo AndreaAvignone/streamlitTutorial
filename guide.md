@@ -154,7 +154,12 @@ col2.dataframe(df,use_container_width=True,height=350)
 ## Aggiungere un prodotto
 Creare un form per aggiungere un nuovo prodotto al DB.
 ### Creazione del form
-Creare la funzione ```create_form()``` e includere il widget del form a cui aggiungere i vari parametri:
+Creare la funzione ```create_form()``` e richiamarla nel main 
+```
+if check_connection():
+	create_form()
+```
+Includere il widget del form a cui aggiungere i vari parametri:
 ```
 with st.form("Nuovo Prodotto"):
 	st.header(":blue[Aggiungi prodotto:]")
