@@ -1,5 +1,4 @@
 # Streamlit Tutorial: Live Coding
-[IN LAVORAZIONE]
 
 Creazione di un'applicazione web multi-page in Streamlit interagendo con un database MySQL per visualizzare e aggiungere dati.
 
@@ -12,7 +11,7 @@ Creazione di un'applicazione web multi-page in Streamlit interagendo con un data
 ## Environment
 ### Per ulteriori informazioni riguardo ai diversi OS e Streamlit: https://docs.streamlit.io/library/get-started/installation
 
-#### 1. Installare l'environment MySQL ()
+#### 1. Installare l'environment MySQL (con Docker e Docker-compose https://github.com/AndreaAvignone/mysql-docker.git)
 #### 2. Creare un nuovo virtual environment Python (e.g. *pipenv*).
 
 Installare pipenv:
