@@ -17,4 +17,4 @@ Installare i moduli Python necessari:
 
 Avviare l'applicazione:
 
-```python -m streamlit run 01_🏠_Home.py```
+```python -m streamlit run Home.py```
