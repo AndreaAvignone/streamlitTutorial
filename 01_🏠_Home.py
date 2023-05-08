@@ -18,3 +18,12 @@ if __name__ == "__main__":
     col1,col2=st.columns([3,2])
     with col1:
         st.title(":red[Live Coding] Session")
+        st.markdown("## Corso di :blue[Basi di Dati]")
+        st.markdown("#### 🧑‍💻️ Creazione di una dashboard")
+    with col2:
+        st.image("images/polito_white.png")
+        
+    if "connection" not in st.session_state.keys():
+        st.session_state["connection"]=False
+
+    check_connection()
