@@ -9,6 +9,7 @@
 * File ```01_🏠_Home``` (homepage)
 
 ### Avviare il progetto 
+``` pip install pipenv```
 
 ```pipenv shell```
 
