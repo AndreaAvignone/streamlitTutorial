@@ -44,3 +44,4 @@ def check_connection():
     if st.session_state["connection"]:
         st.sidebar.success("Connesso al DB")
         return True
+
