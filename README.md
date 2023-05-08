@@ -2,6 +2,7 @@
 
 ## Virtual env
 Si suggerisce di creare un virtual environment (e.g., venv, pipenv).
+
 ```pip install pipenv```
 
 ## Run
@@ -10,7 +11,7 @@ Avviare il virtual env:
 
 ```pipenv shell```
 
-Installare le dependencies:
+Installare i moduli Python necessari:
 
 ```pip install -r requirements.txt```
 
