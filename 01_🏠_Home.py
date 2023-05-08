@@ -1,6 +1,5 @@
 import streamlit as st
 from utils.utils import *
-import pymysql,cryptography
 
 if __name__ == "__main__":
     st.set_page_config(
