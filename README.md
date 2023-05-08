@@ -1,4 +1,5 @@
-# Branch base per avviare un nuovo progetto Streamlit
+# Streamlit Tutorial
+Branch base per avviare un nuovo progetto generico Streamlit con multipage.
 
 ## Virtual env
 Si suggerisce di creare un virtual environment (e.g., venv, pipenv).
