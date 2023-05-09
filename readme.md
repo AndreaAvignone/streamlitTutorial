@@ -3,7 +3,7 @@
 Creazione di un'applicazione web multi-page in Streamlit interagendo con un database MySQL per visualizzare e aggiungere dati.
 
 ## Warm up 
-* Branch *live_coding* è il punto di partenza, branch *live_coding_complete* è l'applicazione finale.=, branch *base* come starting point per un nuovo progetto generico.
+* Branch *live_coding* è il punto di partenza, branch *live_coding_complete* è l'applicazione finale, branch *base* come starting point per un nuovo progetto generico.
 * Per ulteriori informazioni riguardo al database far riferimento a https://www.mysqltutorial.org/mysql-sample-database.aspx.
 * Per la guida passo-passo sulla creazione dell'applicazione, dar riferimento a *guide.md*
 * Per aggiungere emojii utilizzare https://emojifinder.com con copia-incolla.
