@@ -2,6 +2,8 @@
 
 Creazione di un'applicazione web multi-page in Streamlit interagendo con un database MySQL per visualizzare e aggiungere dati.
 
+```git clone https://github.com/AndreaAvignone/streamlitTutorial.git```
+
 ## Warm up 
 * Branch *live_coding* è il punto di partenza, branch *live_coding_complete* è l'applicazione finale, branch *base* come starting point per un nuovo progetto generico.
 * Per ulteriori informazioni riguardo al database far riferimento a https://www.mysqltutorial.org/mysql-sample-database.aspx.
