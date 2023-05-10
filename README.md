@@ -1,6 +1,8 @@
 # Streamlit Tutorial
 Branch base per avviare un nuovo progetto generico Streamlit con multipage.
 
+```git clone https://github.com/AndreaAvignone/streamlitTutorial.git```
+
 ## Cambiare branch con Git
 ```
 git checkout live_coding
