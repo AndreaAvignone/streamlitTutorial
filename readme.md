@@ -33,6 +33,11 @@ pip install -r requirements.txt
 ```
 streamlit hello
 ```
+
+Per fermare:
+
+```Ctrl + C```
+
 #### 4. Lanciare l'applicazione:
 ```
 python -m streamlit run 01_🏠_Home.py
