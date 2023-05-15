@@ -118,7 +118,7 @@ SELECT lastName,firstName FROM employees WHERE jobTitle='President'
 SELECT lastName,firstName FROM employees WHERE jobTitle='VP Sales'
 ```
 2. Personalizzare il markdown
-3. Recuperare le informazioni riguardo la distribuzione dei dipendenti nei vari ruoli. SQL: ```SELECT COUNT(*) as 'numeroClienti',country FROM customers GROUP by country order by `numeroClienti` DESC;```
+3. Recuperare le informazioni riguardo la distribuzione dei dipendenti nei vari ruoli. SQL: ```SELECT jobTitle,COUNT(*) as numDipendenti FROM employees GROUP BY jobTitle ORDER BY numDipendenti DESC;```
 
 4. Generare il dataframe e plottare il risultato:
 ```
