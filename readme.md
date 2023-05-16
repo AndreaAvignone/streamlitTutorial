@@ -1,5 +1,10 @@
 # Streamlit Tutorial: Live Coding
 
+## Installazione completa su Windows
+Vai [qui](readme_windows.md) per una guida completa all'installazione su Windows
+
+## Installazione generica
+
 Creazione di un'applicazione web multi-page in Streamlit interagendo con un database MySQL per visualizzare e aggiungere dati.
 
 ```git clone https://github.com/AndreaAvignone/streamlitTutorial.git```
