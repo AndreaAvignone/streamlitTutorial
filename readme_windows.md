@@ -21,6 +21,8 @@ se l'avvio di Docker da' un errore riguardante un aggiornamento usare prompt dei
 ``` bash
 wsl --update --web-download
 ```
+![prompt_admin](images/installazione/prompt_amministratore.jpg)
+
 Avviare nuovamente Docker Desktop e attendere che finisca il caricamento
 
 :warning: :warning: :warning:
@@ -30,7 +32,7 @@ Avviare nuovamente Docker Desktop e attendere che finisca il caricamento
 ## 2. Prompt dei comandi
 Ogni comando va eseguito nel prompt dei comandi, premendo ENTER per eseguirlo, finchè non appare il nome utente come ultima riga il comando è ancora in esecuzione, lasciar caricare
 Per aprire il prompt corretto:
-![prompt](images/installazione/prompt_amministratore.jpg)
+![prompt](images/installazione/prompt.jpg)
 ``` bash
 mkdir bdd_streamlit
 cd bdd_streamlit
