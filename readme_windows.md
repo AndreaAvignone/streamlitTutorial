@@ -5,11 +5,13 @@
 
 - Installare [Python3](https://www.python.org/downloads/)
 
-Controlla impostazioni da foto per installazione con PATH, segnarsi percorso di installazione evidenziato in foto.
-Assicurarsi anche di attivare "Add Python.exe to PATH"
+:warning: Se hai Python 3.9.7 dovrai reinstallare l'ultima versione in quanto non è supportata da streamlit :warning:
+
+Controlla le impostazioni di installazione (come da foto). Segnarsi il percorso di installazione evidenziato in foto.
+Assicurarsi anche di attivare "Add Python.exe to PATH". Ora è possibile installare Python
 ![python](images/installazione/python.jpg)
 
-- Installare [git](https://git-scm.com/download/win), selezionando la versione windows 64bit
+- Installare [git](https://git-scm.com/download/win), selezionando la versione windows 64bit (è possibile lasciare tutte le impostazioni di default durante l'installazione)
 
 - **RIAVVIARE IL COMPUTER**
 
@@ -41,16 +43,16 @@ cd mysql-docker
 docker compose up -d
 ```
 
-con questi comandi abbiamo creato la cartella `bdd_streamlit` che conterrà tutti i nostri file del progetto streamlit. Con l'ultimo comando abbiamo avviato i container Docker per il DB `mysql` e per `phpmyadmin`. L'interfaccia di phpmyadmin è disponibile all'indirizzo `localhost:8081` accessibile con username `student` e password `user_pwd`
+con questi comandi abbiamo creato la cartella `bdd_streamlit` che conterrà tutti i nostri file del progetto streamlit. Con l'ultimo comando abbiamo avviato i container Docker per il DB `mysql` e per l'interfaccia web `phpmyadmin`. L'interfaccia di phpmyadmin è disponibile all'indirizzo `http://localhost:8081` accessibile con username `student` e password `user_pwd`
 
-Ora copiamo i file del progetto streamlit<br>
+Ora copiamo i file del progetto e avviamo streamlit<br>
 ``` bash
 cd ..  
 git clone https://github.com/AndreaAvignone/streamlitTutorial.git  
 cd streamlitTutorial  
 git checkout live_coding  
 py -m pip install pipenv  
-pipenv --python <Percorso della foto di installazione di python>\python.exe shell  
+pipenv --python <Percorso di installazione di python>\python.exe shell  
 pip install -r requirements.txt  
 python -m streamlit run 01_🏠_Home.py  
 
@@ -67,11 +69,12 @@ Fatto questo tutto dovrebbe funzionare correttamente e aprire in automatico la p
 Sarà anche possibile aprire i file in VS Code per editarli in modo facile.
 Di default la cartella di installazione sarà questa:  
 `C:\Users\<nome_utente>\bdd_streamlit\streamlitTutorial`
-Una volta aperta la cartella corretta bisognerà solo selezionare l'interprete Python corretto in modo che riconosca l'ambiente `pipenv` in cui abbiamo installato le dipendenze
+Una volta aperta la cartella contenente il progetto bisognerà solo più selezionare l'interprete Python corretto in modo che riconosca l'ambiente `pipenv` in cui abbiamo installato le dipendenze
 ![vscode_1](images/installazione/vscode_1.jpg)
 Selezionare ora l'interprete corretto, è quello con **PipEnv come indicatore al fondo**
 ![vscode_2](images/installazione/vscode_2.jpg)
 
+Ora avremo quindi l'highlight della sintassi e i moduli verranno caricati correttamente da VSCode
 <br>
 
 ## 3. Avvio di Streamlit successivamente
