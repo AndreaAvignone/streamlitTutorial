@@ -5,13 +5,17 @@
 
 - Installare [Python3](https://www.python.org/downloads/)
 
-:warning: Se hai Python 3.9.7 dovrai reinstallare l'ultima versione in quanto non è supportata da streamlit :warning:
+:warning: Se hai Python 3.9.7 dovrai reinstallare l'ultima versione in quanto non è supportata da streamlit :warning:\
+:warning: Non installare una versione di Python >3.11. Per ora Streamlit supporta dalla versione 3.7 alla 3.11 (con eccezioni) :warning:
 
-Controlla le impostazioni di installazione (come da foto). Segnarsi il percorso di installazione evidenziato in foto.
-Assicurarsi anche di attivare "Add Python.exe to PATH". Ora è possibile installare Python
+Controlla le impostazioni di installazione (come da foto).
+**Segnarsi il percorso di installazione evidenziato in foto.**\
+Assicurarsi anche di attivare "Add Python.exe to PATH".
+
+Ora è possibile installare Python
 ![python](images/installazione/python.jpg)
 
-- Installare [git](https://git-scm.com/download/win), selezionando la versione windows 64bit (è possibile lasciare tutte le impostazioni di default durante l'installazione)
+- Installare [git](https://git-scm.com/download/win), selezionando la versione Windows 64bit standalone (è possibile lasciare tutte le impostazioni di default durante l'installazione)
 
 - **RIAVVIARE IL COMPUTER**
 
@@ -19,20 +23,22 @@ Assicurarsi anche di attivare "Add Python.exe to PATH". Ora è possibile install
 ![docker](images/installazione/docker.jpg)
 
 :warning: :warning: :warning:
-se l'avvio di Docker da' un errore riguardante un aggiornamento usare prompt dei comandi COME AMMINISTRATORE e eseguire
+se l'avvio di Docker da' un errore riguardante un aggiornamento usare il prompt dei comandi COME AMMINISTRATORE e eseguire
 ``` bash
 wsl --update --web-download
 ```
 ![prompt_admin](images/installazione/prompt_amministratore.jpg)
 
-Avviare nuovamente Docker Desktop e attendere che finisca il caricamento
+Avviare nuovamente Docker Desktop e attendere che finisca il caricamento prima di eseguire i prossimi comandi
 
 :warning: :warning: :warning:
 
 <br>
 
 ## 2. Prompt dei comandi
-Ogni comando va eseguito nel prompt dei comandi, premendo ENTER per eseguirlo, finchè non appare il nome utente come ultima riga il comando è ancora in esecuzione, lasciar caricare
+Ogni comando va eseguito nel prompt dei comandi, premendo ENTER per eseguirlo. Un comando è in esecuzione fino a quando non ritorna il nome della directory corrente e il simbolo `>`. (es. `C:\Users\<nomeutente>`)\
+Lasciar quindi eseguire il comando finchè non avra terminato l'esecuzione prima di immetterne un altro. Alcuni comandi come l'installazione dei requirements con `pip` potrebbero impiegare svariati minuti
+
 Per aprire il prompt corretto:
 ![prompt](images/installazione/prompt.jpg)
 ``` bash
@@ -43,7 +49,8 @@ cd mysql-docker
 docker compose up -d
 ```
 
-con questi comandi abbiamo creato la cartella `bdd_streamlit` che conterrà tutti i nostri file del progetto streamlit. Con l'ultimo comando abbiamo avviato i container Docker per il DB `mysql` e per l'interfaccia web `phpmyadmin`. L'interfaccia di phpmyadmin è disponibile all'indirizzo `http://localhost:8081` accessibile con username `student` e password `user_pwd`
+con questi comandi abbiamo creato la cartella `bdd_streamlit` (all'interno del percorso `C:\Users\<nome utente>`) che conterrà tutti i nostri file del progetto streamlit. Con l'ultimo comando abbiamo avviato i container Docker per il DB `mysql` e per l'interfaccia web `phpmyadmin`. L'interfaccia di `phpmyadmin` è disponibile all'indirizzo `http://localhost:8081` accessibile con username `student` e password `user_pwd`\
+(modificabili tramite il file `.env` nella cartella `mysql-docker`, previo arresto e riavvio dei container)
 
 Ora copiamo i file del progetto e avviamo streamlit<br>
 ``` bash
@@ -54,14 +61,16 @@ git checkout live_coding
 py -m pip install pipenv  
 pipenv --python <Percorso di installazione di python>\python.exe shell  
 pip install -r requirements.txt  
-python -m streamlit run 01_🏠_Home.py  
-
-```	
-il percorso al comando 6 sarà quindi simile a questo:
+python -m streamlit run 01_🏠_Home.py
+```
+:information_source: :information_source: :information_source: \
+il percorso al comando 6 sarà quindi quello segnato al momento dell'installazione di Python con l'aggiunta di `\python.exe`, sarà quindi simile a questo:
 ``` bash
 pipenv --python C:\Users\<nome utente>\AppData\Local\Programs\Python\Python311\python.exe shell
 ```
-Fatto questo tutto dovrebbe funzionare correttamente e aprire in automatico la pagina di streamlit
+:information_source: :information_source: :information_source:
+
+Fatto questo tutto dovrebbe funzionare correttamente e aprire in automatico la pagina di streamlit nel browser predefinito
 
 <br>
 
@@ -82,7 +91,8 @@ Per riavviare streamlit le volte successive (dopo un riavvio del pc o se chiudi 
 
 1. Avviare Docker Desktop
 2. Aprire prompt comandi
-3. `cd bdd_streamlit`
+3. `cd bdd_streamlit`\
+:warning: nel caso in cui si abbia modificato la cartella di installazione sarà necessario spostarsi nella cartella corretta :warning:
 4. `cd mysql-docker`
 5. `docker compose up -d`
 6. `cd ..`
