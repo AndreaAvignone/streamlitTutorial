@@ -92,7 +92,7 @@ Per riavviare streamlit le volte successive (dopo un riavvio del pc o se chiudi 
 1. Avviare Docker Desktop
 2. Aprire prompt comandi
 3. `cd bdd_streamlit`\
-:warning: nel caso in cui si abbia modificato la cartella di installazione sarà necessario spostarsi nella cartella corretta :warning:
+:warning: se la directory di installazione è diversa da quella di default sarà necessario spostarsi in quella corretta :warning:
 4. `cd mysql-docker`
 5. `docker compose up -d`
 6. `cd ..`
