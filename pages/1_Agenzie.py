@@ -8,7 +8,7 @@ if __name__ == "__main__":
     if check_connection():
         query="SELECT COUNT(*) AS 'numAgenzie' FROM AGENZIA;"
         agenzieN=execute_query(st.session_state["connection"],query)
-        query="SELECT COUNT(DISTINCT Citta_Indirizzo) AS numCittà FROM `AGENZIA`;;"
+        query="SELECT COUNT(DISTINCT Citta_Indirizzo) AS numCittà FROM `AGENZIA`;"
         agenzieCity=execute_query(st.session_state["connection"],query)
         query="SELECT Citta_Indirizzo,COUNT(*) AS num FROM `AGENZIA` GROUP BY Citta_Indirizzo ORDER BY `num` DESC LIMIT 1;"
         city=execute_query(st.session_state["connection"],query)
