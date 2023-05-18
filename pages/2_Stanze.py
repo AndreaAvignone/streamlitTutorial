@@ -66,8 +66,8 @@ if __name__ == "__main__":
             for index, row in df.iterrows():
                 col1,col2=st.columns(2)
                 col1.subheader(f":green[Risultato {index+1}]")
-                col1.text(f"Codice Stanza:{row['CodS']}")
-                col1.text(f"Piano:{row['CodS']}")
-                col1.text(f"Tipo:{row['Type']}")
+                col1.text(f"Codice Stanza: {row['CodS']}")
+                col1.text(f"Piano: {row['Piano']}")
+                col1.text(f"Tipo: {row['Type']}")
                 col2.image(f"images/{row['Type']}.png")
 
