@@ -19,4 +19,6 @@ if __name__ == "__main__":
     col1,col2=st.columns([3,2])
     with col1:
         st.title(":red[Live Coding] Session")
-  
+
+# prova
+# prova 2
