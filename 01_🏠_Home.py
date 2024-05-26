@@ -21,4 +21,3 @@ if __name__ == "__main__":
         st.title(":red[Live Coding] Session")
 
 # prova
-# prova 2
