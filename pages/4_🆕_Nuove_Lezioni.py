@@ -1,8 +1,15 @@
 import streamlit as st
+from utils.utils import *
 
 if __name__ == "__main__":
+
+
+    # TODO: change this
     st.title("ℹ️ Informazioni sul :red[DB]")
     st.subheader("*Database di un rivenditore di modellini in scala di automobili.*")
+
+    connection_ui()
+
 
     col1,col2=st.columns(2)
     col1.image("images/MySQL-Sample-Database-Schema.png")
